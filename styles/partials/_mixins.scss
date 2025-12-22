@@ -1,0 +1,44 @@
+@use './variables' as *;
+
+// Neobrutalism button style
+@mixin neo-button($shadow-offset: 4px, $bg-color: $neon-green) {
+    font-family: $base-font;
+    background-color: $bg-color;
+    color: $border-color;
+    border: 2px solid $border-color;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: none;
+    box-shadow: #{$shadow-offset} #{$shadow-offset} 0px $border-color;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+
+    &:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 0px 0px 0px $border-color;
+    }
+}
+
+// Responsive breakpoints
+@mixin mobile {
+    @media (max-width: $mobile-breakpoint) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin tablet-up {
+    @media (min-width: #{$tablet-breakpoint + 1}) {
+        @content;
+    }
+}
+
+@mixin desktop-up {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}

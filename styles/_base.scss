@@ -1,0 +1,57 @@
+@use './partials/variables' as *;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    
+    @media (prefers-reduced-motion: reduce) {
+        scroll-behavior: auto;
+    }
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: $base-font;
+    background-color: $light-bg;
+    color: $font-base-color;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    margin-top: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration-skip-ink: auto;
+}
+
+// Accessibility: Focus styles
+:focus-visible {
+    outline: 3px solid $neon-green;
+    outline-offset: 2px;
+}
+
+// Selection color
+::selection {
+    background-color: $neon-green;
+    color: $dark-bg;
+}
+
+

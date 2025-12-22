@@ -1,0 +1,28 @@
+---
+
+---
+
+<a href="/resume.pdf" download="Arturo_Guerrero_Resume.pdf" class="cta-resume">
+  Download Resume
+</a>
+
+<style lang="scss">
+  .cta-resume {
+    @include neo-button(3px, $light-bg);
+    padding: 8px 14px;
+    text-decoration: none;
+    display: inline-block;
+    transition:
+      background-color 0.2s ease,
+      transform 0.12s ease,
+      box-shadow 0.12s ease;
+
+    &:hover {
+      background: darken($light-bg, 8%);
+    }
+
+    &:active {
+      background: darken($light-bg, 15%);
+    }
+  }
+</style>

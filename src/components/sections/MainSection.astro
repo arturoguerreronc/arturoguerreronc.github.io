@@ -1,0 +1,146 @@
+---
+import ResumeButton from "../buttons/ResumeButton.astro";
+import SocialButton from "../buttons/SocialButton.astro";
+---
+
+<main>
+  <section>
+    <div>
+      <h1>
+        <span class="highlight-anim"></span>, I'm Arturo Guerrero
+      </h1>
+      <p class="intro">
+        I'm passionate about creating efficient software solutions, with a keen
+        interest in data analysis, cloud technologies, and AI. I enjoy coding
+        and building software applications.
+      </p>
+      <p>
+        When I'm not coding, you'll find me exploring new tech trends,
+        contributing to open-source projects, or sharing knowledge with the
+        developer community.
+      </p>
+      <p>
+        If you share similar interests or have exciting opportunities, drop me a
+        email or connect with me on social media!
+        <br />
+        <a
+          id="email-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="mailto:hello@arturoguerrero.me">hello@arturoguerrero.me</a
+        >
+      </p>
+    </div>
+    <div class="contact-buttons">
+      <SocialButton href="https://github.com/arturoguerreronc" />
+      <ResumeButton />
+    </div>
+  </section>
+</main>
+
+<script src="/src/scripts/terminalEffect.ts"></script>
+
+<style lang="scss">
+  .highlight-anim {
+    color: $neon-green;
+    font-family: "Space Mono", monospace;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    height: calc(100dvh - 60px);
+    padding: 1.5rem;
+
+    @include tablet-up {
+      padding: 2rem;
+    }
+  }
+
+  section {
+    max-width: 700px;
+    width: 100%;
+    text-align: left;
+
+    > div:first-child {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.45rem;
+
+      @include tablet-up {
+        gap: 1rem;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+    color: $font-base-color;
+
+    @include tablet-up {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .intro {
+    color: $font-alternate-color;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+
+    @include tablet-up {
+      font-size: 1.25rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 100%;
+    margin: 0;
+    color: $font-alternate-color;
+
+    @include tablet-up {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  }
+
+  #email-btn {
+    color: $font-base-color;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+    padding: 0 2px;
+
+    &:hover,
+    &:focus {
+      background-color: $neon-green;
+      color: $dark-bg;
+      outline: none;
+    }
+  }
+
+  .contact-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    @include tablet-up {
+      gap: 1.5rem;
+    }
+  }
+</style>
