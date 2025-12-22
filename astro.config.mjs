@@ -8,6 +8,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // https://astro.build/config
 export default defineConfig({
   site: 'https://arturoguerrero.me',
+  base: '/',
+  output: 'static',
   vite: {
     css: {
       preprocessorOptions: {
