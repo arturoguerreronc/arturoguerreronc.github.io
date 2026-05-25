@@ -81,7 +81,7 @@ import SocialButton from "../buttons/SocialButton.astro";
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 0.25rem;
-    color: $font-base-color;
+    color: var(--text-primary);
 
     @include tablet-up {
       font-size: 2.5rem;
@@ -90,7 +90,7 @@ import SocialButton from "../buttons/SocialButton.astro";
   }
 
   .intro {
-    color: $font-alternate-color;
+    color: var(--text-secondary);
     font-size: 1.1rem;
     margin-bottom: 0.25rem;
 
@@ -104,7 +104,7 @@ import SocialButton from "../buttons/SocialButton.astro";
     line-height: 1.5;
     max-width: 100%;
     margin: 0;
-    color: $font-alternate-color;
+    color: var(--text-secondary);
 
     @include tablet-up {
       font-size: 1.1rem;
@@ -113,7 +113,7 @@ import SocialButton from "../buttons/SocialButton.astro";
   }
 
   #email-btn {
-    color: $font-base-color;
+    color: var(--text-primary);
     font-weight: bold;
     text-decoration: underline;
     text-underline-offset: 4px;
@@ -125,7 +125,7 @@ import SocialButton from "../buttons/SocialButton.astro";
     &:hover,
     &:focus {
       background-color: $neon-green;
-      color: $dark-bg;
+      color: var(--accent-contrast);
       outline: none;
     }
   }

@@ -1,5 +1,6 @@
 ---
 import "../../styles/global.scss";
+import ThemeToggle from "../components/buttons/ThemeToggle.astro";
 const { pageTitle } = Astro.props;
 ---
 
@@ -23,9 +24,15 @@ const { pageTitle } = Astro.props;
       rel="stylesheet"
     />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#f5f5f5" />
     <title>{pageTitle}</title>
+    <script src="/src/scripts/themeToggle.ts"></script>
   </head>
   <body>
-    <slot />
+    <ThemeToggle />
+    <div class="grid-background" aria-hidden="true"></div>
+    <div class="page-shell">
+      <slot />
+    </div>
   </body>
 </html>
